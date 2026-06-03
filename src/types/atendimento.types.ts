@@ -1,0 +1,10 @@
+export type AtendimentoStatus = 'novo' | 'em_andamento' | 'concluido'
+
+export interface Atendimento {
+  id: number
+  protocolo: string
+  solicitante: string
+  assunto: string
+  status: AtendimentoStatus
+  dataCriacao: string
+}

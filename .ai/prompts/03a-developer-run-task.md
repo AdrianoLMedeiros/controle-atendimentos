@@ -8,11 +8,9 @@ Use os contextos:
 .ai/context/requirements.md
 .ai/context/architecture.md
 .ai/context/roadmap.md
-.ai/decisions/0001-initial-stack.md
+.ai/decisions/
 
-Use a tarefa:
-
-.ai/tasks/0002-create-base-layout.md
+Use a última tarefa disponível em .ai/tasks/
 
 Sua função é atuar como Desenvolvedor Frontend do projeto.
 

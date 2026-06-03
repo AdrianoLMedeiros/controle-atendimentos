@@ -1,5 +1,6 @@
 <template>
   <aside class="app-sidebar">
+    <span class="nav-label">Navegação</span>
     <nav aria-label="Menu principal">
       <RouterLink to="/">Início</RouterLink>
       <RouterLink to="/atendimentos">Atendimentos</RouterLink>

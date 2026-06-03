@@ -223,7 +223,10 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 
 - A versão inicial será usada para validar estrutura, navegação e fluxo básico do produto.
 - O usuário principal é uma pessoa administrativa que registra e acompanha atendimentos.
-- Os dados essenciais de um atendimento ainda precisam ser detalhados.
+- Os dados essenciais iniciais para representar um atendimento são: protocolo, solicitante, assunto, status e data de criação.
+- Para a tela inicial de cadastro, os campos editáveis mínimos previstos são: solicitante, assunto e status.
+- Protocolo e data de criação podem ser tratados inicialmente como informações demonstrativas ou geradas pela aplicação, sem integração com backend.
+- Os status iniciais previstos para validação do MVP são: novo, em andamento e concluído.
 - A listagem pode funcionar inicialmente com dados estáticos, vazios ou simulados, desde que não seja tratada como persistência definitiva.
 - A filtragem citada no objetivo do briefing deve ser mantida simples nesta fase.
 - A persistência local será avaliada apenas em etapa posterior.
@@ -231,9 +234,9 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 
 ## 9. Dúvidas e pontos pendentes
 
-- Quais campos são obrigatórios para um atendimento administrativo?
-- Quais informações mínimas devem aparecer na listagem de atendimentos?
-- Quais status ou situações um atendimento pode possuir?
+- Validar se os campos iniciais propostos para atendimento são suficientes: protocolo, solicitante, assunto, status e data de criação.
+- Validar se os campos editáveis mínimos do cadastro inicial devem ser apenas solicitante, assunto e status.
+- Validar se os status iniciais novo, em andamento e concluído são adequados para o uso administrativo real.
 - A página inicial deve exibir algum resumo ou apenas atalhos de navegação?
 - O formulário de novo atendimento deve permitir submissão visual sem persistência ou apenas estruturar os campos?
 - Haverá necessidade de dados demonstrativos para validação do MVP?

@@ -2,11 +2,11 @@
 
 ## Descrição breve
 
-SPA inicial para controle de atendimentos administrativos, criada como base técnica para evolução incremental do produto.
+SPA inicial para controle de atendimentos administrativos, com base técnica, rotas principais, layout compartilhado, listagem visual simples e formulário inicial sem persistência.
 
 ## Objetivo
 
-Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendimentos administrativos em uma aplicação web simples. No estado atual, o projeto entrega a base técnica, a navegação principal e páginas iniciais sem persistência de dados.
+Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendimentos administrativos em uma aplicação web simples. No estado atual, o projeto entrega a base técnica, a navegação principal, o layout base, páginas iniciais, uma listagem visual simples com dados demonstrativos e um formulário inicial de cadastro sem persistência de dados.
 
 ## Stack utilizada
 
@@ -26,10 +26,19 @@ Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendime
   - `/atendimentos/novo`
 - Pinia instalado e configurado na entrada da aplicação.
 - Store geral simples em `src/stores/app.ts` para o nome do sistema.
-- Layout base com cabeçalho, menu lateral e área de conteúdo.
+- Layout base compartilhado com cabeçalho, menu lateral e área principal de conteúdo.
+- Navegação visual entre as páginas principais.
+- Container de conteúdo e ajustes responsivos básicos no CSS global.
 - Página inicial com acesso para atendimentos e novo atendimento.
-- Página base de listagem de atendimentos, ainda sem lista funcional.
-- Página base de novo atendimento, ainda sem formulário funcional.
+- Página de atendimentos com listagem visual simples.
+- Componentes próprios para lista, item de atendimento e estado vazio.
+- Tipo TypeScript inicial para atendimento administrativo.
+- Dados demonstrativos isolados em `src/data/atendimentos.mock.ts`.
+- Representação visual de protocolo, solicitante, assunto, status e data de criação.
+- Página de novo atendimento com formulário visual inicial.
+- Formulário com campos editáveis para solicitante, assunto e status.
+- Ação de confirmação visual com mensagem informando que nenhum dado foi salvo.
+- Acesso de retorno da página de novo atendimento para a listagem.
 - `.gitignore` configurado com `node_modules/` e `dist/`.
 
 ## Funcionalidades fora do escopo atual
@@ -39,9 +48,12 @@ Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendime
 - Banco de dados.
 - Persistência local.
 - CRUD completo de atendimentos.
-- Formulário funcional de cadastro.
-- Listagem funcional com dados reais ou persistidos.
+- Cadastro real persistido.
+- Criação de registros na listagem a partir do formulário.
+- Listagem com dados reais ou persistidos.
+- Filtros funcionais ou avançados.
 - Edição ou exclusão de atendimentos.
+- Detalhamento de atendimento.
 - Upload de arquivos.
 - Relatórios avançados.
 - Controle de permissões.
@@ -65,10 +77,19 @@ src/
     AtendimentosPage.vue
     NovoAtendimentoPage.vue
   components/
+    atendimentos/
+      AtendimentoEmptyState.vue
+      AtendimentoForm.vue
+      AtendimentoList.vue
+      AtendimentoListItem.vue
     layout/
       MainLayout.vue
       AppHeader.vue
       AppSidebar.vue
+  data/
+    atendimentos.mock.ts
+  types/
+    atendimento.types.ts
   assets/
 public/
 ```
@@ -115,12 +136,15 @@ npm run preview
 
 ## Próximos passos
 
-- Consolidar layout e navegação da versão 0.2.0.
-- Evoluir a página de atendimentos para uma listagem simples.
-- Definir os campos essenciais de um atendimento.
-- Criar o formulário inicial de novo atendimento em etapa posterior.
+- Refinar a apresentação da data de criação para formato mais amigável ao usuário.
+- Refinar a validação visual do formulário de novo atendimento.
+- Validar com o Product Owner os campos essenciais de um atendimento.
 - Avaliar persistência local apenas após aprovação explícita.
+- Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas
 
-- O review da tarefa 0001 apontou assets sem uso claro em `src/assets/`, como possíveis sobras de template. Eles não foram removidos nesta atualização porque a tarefa atual restringe alterações ao escopo documental.
+- Os reviews das tarefas 0001, 0002, 0003 e 0004 apontaram assets sem uso claro em `src/assets/`, como possíveis sobras de template. Eles não foram removidos nesta atualização porque a tarefa atual restringe alterações ao escopo documental.
+- O review da tarefa 0003 apontou que a data de criação é exibida em formato técnico ISO, como `2026-06-01`, e recomenda refinamento futuro para formato mais amigável.
+- O review da tarefa 0004 apontou que o formulário permite confirmação visual mesmo com solicitante e assunto vazios; recomenda validação visual simples ou ajuste da mensagem em refinamento futuro.
+- Os reviews das tarefas 0002, 0003 e 0004 apontaram que `src/style.css` ainda está simples, mas deve ser monitorado para evitar acúmulo de estilos globais, layout e domínio nas próximas etapas.

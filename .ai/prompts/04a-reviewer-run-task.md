@@ -8,17 +8,13 @@ Use os contextos:
 .ai/context/requirements.md
 .ai/context/architecture.md
 .ai/context/roadmap.md
-.ai/decisions/0001-initial-stack.md
+.ai/decisions/
 
-Use a tarefa:
+Use a última tarefa disponível em .ai/tasks/
 
-.ai/tasks/0002-create-base-layout.md
+Revise a implementação atual da tarefa.
 
-Revise a implementação atual da tarefa 0002.
-
-Sua saída deve ser registrada no arquivo:
-
-.ai/reviews/0002-create-base-layout-review.md
+Sua saída deve ser registrada em um arquivo com numeração incremental e com o mesmo nome da tarefa na pasta, acrescido do termo -review, na pasta .ai/reviews/
 
 Não altere código de produção.
 Não implemente novas funcionalidades.

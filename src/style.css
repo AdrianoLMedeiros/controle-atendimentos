@@ -54,7 +54,7 @@ a {
   border-bottom: 1px solid var(--border);
 }
 
-.app-header div {
+.app-brand {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -82,6 +82,15 @@ a {
   border-right: 1px solid var(--border);
 }
 
+.nav-label {
+  display: block;
+  margin: 0 12px 10px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .app-sidebar nav {
   display: grid;
   gap: 8px;
@@ -104,6 +113,11 @@ a {
   flex: 1;
   min-width: 0;
   padding: 28px;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1120px;
 }
 
 .page-section {
@@ -155,6 +169,139 @@ a {
 .panel p {
   margin: 0;
   color: var(--text-muted);
+}
+
+.attendance-list {
+  width: 100%;
+}
+
+.attendance-list-items {
+  display: grid;
+  gap: 12px;
+}
+
+.attendance-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.attendance-main,
+.attendance-meta {
+  display: grid;
+  gap: 6px;
+}
+
+.attendance-main strong {
+  font-size: 16px;
+}
+
+.attendance-main span,
+.attendance-meta time {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.attendance-protocol {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.attendance-meta {
+  justify-items: end;
+  flex: 0 0 auto;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  border-radius: 999px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-novo {
+  color: #155eef;
+  background: #eef4ff;
+}
+
+.status-em_andamento {
+  color: #92400e;
+  background: #fffbeb;
+}
+
+.status-concluido {
+  color: #047857;
+  background: #ecfdf3;
+}
+
+.attendance-empty {
+  display: grid;
+  gap: 6px;
+  padding: 20px;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  background: var(--surface-muted);
+}
+
+.attendance-empty p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.attendance-form {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+}
+
+.form-field span {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  background: var(--surface);
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.form-message {
+  padding: 12px;
+  border-radius: 8px;
+  color: #047857;
+  background: #ecfdf3;
 }
 
 .action-row {
@@ -214,6 +361,9 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .nav-label {
+    display: none;
+  }
 }
 
 @media (max-width: 560px) {
@@ -230,9 +380,18 @@ a {
     font-size: 24px;
   }
 
+  .attendance-item {
+    flex-direction: column;
+  }
+
+  .attendance-meta {
+    justify-items: start;
+  }
+
   .button-primary,
   .button-secondary,
-  .action-row {
+  .action-row,
+  .form-actions {
     width: 100%;
   }
 }

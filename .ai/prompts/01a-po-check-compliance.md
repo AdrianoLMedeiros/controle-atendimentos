@@ -33,6 +33,7 @@ Revisar o estado atual do projeto após a conclusão da *última task*, verifica
 5. Confirmar qual deve ser a próxima prioridade do produto.
 6. Indicar se a próxima task deve manter o roadmap atual ou se algum ajuste é necessário.
 7. Registrar recomendações de produto para orientar o Agente Arquiteto Frontend.
+8. Sugerir que as pendências das etapas anteriores sejam sanadas na atual rodada, se for relevante o suficiente, ou registrá-las como pendência no backlog.
 
 ## Regras
 
