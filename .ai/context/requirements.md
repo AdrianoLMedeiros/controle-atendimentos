@@ -55,6 +55,7 @@ Descrição:
 O sistema deve possuir uma página inicial que funcione como ponto de entrada da aplicação e apresente acesso às principais áreas do MVP.
 
 Critérios de aceite:
+
 - A página inicial deve estar acessível por uma rota principal.
 - A página inicial deve permitir ao usuário identificar que está no sistema Controle de Atendimentos.
 - A página inicial deve oferecer acesso à listagem de atendimentos.
@@ -66,6 +67,7 @@ Descrição:
 O sistema deve permitir navegação entre a página inicial, a página de listagem de atendimentos e a página de novo atendimento.
 
 Critérios de aceite:
+
 - O usuário deve conseguir acessar a página inicial.
 - O usuário deve conseguir acessar a listagem de atendimentos.
 - O usuário deve conseguir acessar a página de novo atendimento.
@@ -77,6 +79,7 @@ Descrição:
 O sistema deve possuir um layout principal comum para organizar a navegação e o conteúdo das páginas.
 
 Critérios de aceite:
+
 - As páginas principais devem compartilhar uma estrutura visual comum.
 - O layout deve conter área de navegação ou acesso às rotas principais.
 - O conteúdo de cada página deve ser apresentado de forma clara.
@@ -88,6 +91,7 @@ Descrição:
 O sistema deve possuir uma página para listagem de atendimentos administrativos.
 
 Critérios de aceite:
+
 - A página de listagem deve estar acessível por rota própria.
 - A página deve apresentar uma área destinada à exibição dos atendimentos.
 - A página deve prever a apresentação de informações básicas de cada atendimento.
@@ -99,6 +103,7 @@ Descrição:
 O sistema deve possuir uma página para registro de novo atendimento administrativo.
 
 Critérios de aceite:
+
 - A página de novo atendimento deve estar acessível por rota própria.
 - A tela deve apresentar um formulário ou estrutura equivalente para registrar um atendimento.
 - O formulário deve conter apenas campos essenciais para a fase inicial.
@@ -110,6 +115,7 @@ Descrição:
 O sistema deve considerar a necessidade de filtrar atendimentos administrativos, mantendo a implementação inicial simples e compatível com a ausência de persistência local.
 
 Critérios de aceite:
+
 - A listagem deve prever espaço ou organização compatível com filtros simples.
 - A filtragem avançada não deve ser implementada no MVP.
 - Qualquer filtro inicial deve ser limitado e não deve exigir backend ou banco de dados.
@@ -120,6 +126,7 @@ Descrição:
 O sistema deve permitir que a listagem sirva como base para acompanhamento dos atendimentos administrativos.
 
 Critérios de aceite:
+
 - A listagem deve apresentar informações suficientes para diferenciar atendimentos.
 - A interface deve permitir reconhecer o estado ou situação de acompanhamento quando essa informação estiver disponível.
 - O acompanhamento deve permanecer simples, sem histórico, workflow ou controle de permissões.
@@ -132,6 +139,7 @@ Descrição:
 O produto deve priorizar uma experiência simples, direta e adequada à primeira versão funcional.
 
 Critérios de aceite:
+
 - O MVP deve conter apenas as telas e fluxos previstos no escopo inicial.
 - Funcionalidades futuras não devem bloquear a entrega da versão 0.1.
 - A interface deve evitar complexidade desnecessária.
@@ -142,6 +150,7 @@ Descrição:
 As telas devem ser claras para um usuário administrativo entender onde está e quais ações principais pode realizar.
 
 Critérios de aceite:
+
 - Os nomes das páginas e ações devem ser objetivos.
 - A navegação entre páginas principais deve ser evidente.
 - A aplicação deve evitar termos técnicos voltados à implementação.
@@ -152,6 +161,7 @@ Descrição:
 A definição do produto deve permitir evolução posterior sem antecipar funcionalidades fora do MVP.
 
 Critérios de aceite:
+
 - O MVP deve separar claramente o que está dentro e fora do escopo.
 - Requisitos futuros devem ser tratados como pontos de evolução, não como obrigatórios para a versão inicial.
 - O produto não deve assumir backend, autenticação ou banco de dados na fase atual.
@@ -162,6 +172,7 @@ Descrição:
 As páginas principais devem manter consistência visual suficiente para parecerem parte do mesmo sistema.
 
 Critérios de aceite:
+
 - Layout, navegação e organização de conteúdo devem seguir um padrão comum.
 - A experiência não deve variar de forma injustificada entre páginas do MVP.
 - A aplicação deve ser adequada para validação inicial por usuários internos.
@@ -172,6 +183,7 @@ Descrição:
 O projeto não deve introduzir bibliotecas externas sem aprovação.
 
 Critérios de aceite:
+
 - Qualquer necessidade de biblioteca externa deve ser registrada e validada antes de adoção.
 - O MVP deve preferir soluções simples e compatíveis com as diretrizes do briefing.
 

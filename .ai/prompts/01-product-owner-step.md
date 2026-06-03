@@ -21,16 +21,16 @@ Analisar o briefing inicial do projeto e produzir uma definição clara do produ
 .ai/context/requirements.md
 .ai/decisions/0001-initial-stack.md
 
-2. Definir o objetivo funcional do sistema.
-3. Identificar o público usuário inicial.
-4. Definir as funcionalidades do MVP.
-5. Definir requisitos funcionais.
-6. Definir requisitos não funcionais.
-7. Definir regras de negócio iniciais.
-8. Definir critérios de aceite gerais do MVP.
-9. Separar claramente o que está dentro e fora do escopo inicial.
-10. Indicar dúvidas, premissas e pontos pendentes.
-11. Formalizar a stack inicial já definida pelo dono do projeto como restrição obrigatória para orientação do Agente Arquiteto Frontend.
+1. Definir o objetivo funcional do sistema.
+2. Identificar o público usuário inicial.
+3. Definir as funcionalidades do MVP.
+4. Definir requisitos funcionais.
+5. Definir requisitos não funcionais.
+6. Definir regras de negócio iniciais.
+7. Definir critérios de aceite gerais do MVP.
+8. Separar claramente o que está dentro e fora do escopo inicial.
+9. Indicar dúvidas, premissas e pontos pendentes.
+10. Formalizar a stack inicial já definida pelo dono do projeto como restrição obrigatória para orientação do Agente Arquiteto Frontend.
 
 ## Regras gerais
 
