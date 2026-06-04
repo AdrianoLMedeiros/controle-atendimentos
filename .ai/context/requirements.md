@@ -232,7 +232,8 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - A filtragem citada no objetivo do briefing deve ser mantida simples nesta fase.
 - A persistência local será avaliada apenas em etapa posterior.
 - A versão 0.1 deve evitar funcionalidades que dependam de backend, autenticação, banco de dados ou permissões.
-- A evolução para estado compartilhado e persistência local depende de aprovação explícita após refinamento do MVP visual.
+- O MVP visual já foi refinado antes da avaliação de persistência local.
+- A evolução para estado compartilhado e persistência local depende de decisão explícita de produto antes de implementação.
 
 ## 9. Dúvidas e pontos pendentes
 
@@ -240,7 +241,6 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - Validar se os campos editáveis mínimos do cadastro inicial devem ser apenas solicitante, assunto e status.
 - Validar se os status iniciais novo, em andamento e concluído são adequados para o uso administrativo real.
 - A página inicial deve exibir algum resumo ou apenas atalhos de navegação?
-- O formulário de novo atendimento deve permitir submissão visual sem persistência ou apenas estruturar os campos?
 - A evolução para persistência local deve ser aprovada agora ou permanecer no backlog?
 - Haverá necessidade de dados demonstrativos para validação do MVP?
 - Quais filtros simples devem ser priorizados quando a filtragem for implementada?

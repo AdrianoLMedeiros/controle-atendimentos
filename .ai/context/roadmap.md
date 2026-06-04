@@ -121,24 +121,47 @@ Critérios de aceite:
 - pendências de baixa complexidade são resolvidas ou registradas no backlog;
 - não há backend, login, banco de dados, localStorage, store de atendimentos ou CRUD completo.
 
-## Versão 0.5.0 — Estado e persistência local
+## Versão 0.5.0 — Avaliação de estado e persistência local
 
 Objetivo:
 
-Avaliar e implementar estado compartilhado e persistência local apenas após validação do MVP inicial e aprovação explícita para essa evolução.
+Avaliar a necessidade real de estado compartilhado e persistência local após validação do MVP visual, produzindo recomendação objetiva antes de qualquer implementação.
 
 Tarefas previstas:
 
 - revisar necessidade real de estado compartilhado;
+- avaliar impacto de permitir criação real de atendimentos no navegador;
+- definir benefícios, riscos e limites de persistência local;
+- recomendar aprovação, adiamento ou rejeição da persistência local;
+- registrar decisão de produto antes de implementação;
+- preservar ausência de backend, autenticação e banco de dados.
+
+Critérios de aceite:
+
+- recomendação sobre persistência local está registrada;
+- decisão de produto está clara antes de qualquer implementação;
+- escopo aprovado, se houver, está limitado ao navegador;
+- não há implementação de store de atendimentos, localStorage ou criação real de registros nesta etapa;
+- aplicação continua sem backend, login, banco de dados ou permissões.
+
+## Versão 0.5.1 — Implementação de persistência local, se aprovada
+
+Objetivo:
+
+Implementar estado compartilhado e persistência local somente se a avaliação da versão 0.5.0 aprovar explicitamente essa evolução.
+
+Tarefas previstas:
+
 - criar store de atendimentos com Pinia, se aprovada;
 - criar serviço simples para localStorage, se aprovado;
 - definir contratos de leitura e gravação;
+- permitir cadastro real local no navegador, se aprovado;
 - manter persistência limitada ao navegador;
 - preservar ausência de backend, autenticação e banco de dados.
 
 Critérios de aceite:
 
-- decisão de persistência local está aprovada antes da implementação;
+- decisão de persistência local foi aprovada antes da implementação;
 - atendimentos podem ser mantidos localmente no navegador, se essa etapa for autorizada;
 - store de atendimentos possui responsabilidade clara;
 - serviço de localStorage fica separado da camada visual;
@@ -175,8 +198,9 @@ Critérios de aceite:
 3. Implementar listagem simples.
 4. Implementar cadastro inicial.
 5. Sanar refinamentos simples antes de persistência.
-6. Avaliar estado e persistência local somente após aprovação.
-7. Implementar filtros simples e melhorias de uso.
+6. Avaliar estado e persistência local.
+7. Implementar persistência local somente se aprovada.
+8. Implementar filtros simples e melhorias de uso.
 
 ## Observações de escopo
 

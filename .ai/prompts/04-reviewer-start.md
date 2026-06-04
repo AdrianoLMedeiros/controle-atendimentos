@@ -2,36 +2,27 @@ Use o agente:
 
 .ai/agents/04-code-reviewer.md
 
-Use os contextos:
+Use o contexto:
 
 .ai/context/project-brief.md
-.ai/context/requirements.md
 .ai/context/architecture.md
-.ai/context/roadmap.md
-.ai/decisions/
 
-Use a última tarefa disponível em .ai/tasks/
+Use a tarefa:
+
+.ai/tasks/0001-setup-project.md
 
 ## Objetivo
+Revise a implementação atual do projeto.
 
-Revise a implementação atual da tarefa.
+Sua saída deve ser registrada no arquivo:
+
+.ai/reviews/0001-setup-project-review.md
 
 ## Regras
-
 Não altere código de produção.
 Não implemente novas funcionalidades.
 Não refatore.
 Apenas revise e registre os achados no arquivo indicado.
-
-Avalie especialmente:
-
-1. Se a tarefa foi cumprida.
-2. Se houve implementação fora do escopo.
-3. Se o layout está coerente com a arquitetura.
-4. Se os componentes foram bem separados.
-5. Se o CSS permaneceu simples.
-6. Se nenhuma biblioteca visual externa foi adicionada.
-7. Se o projeto continua apto a executar com `npm run dev`.
 
 ## Política de escalação para decisão humana
 
@@ -59,11 +50,3 @@ Nesse caso, quando encontrar risco ou divergência que não seja apenas correç�
 5. Não implemente código relacionado à decisão pendente.
 6. Aguarde decisão humana.
 7. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
-
-
-
-## Saída esperada
-
-Sua saída deve ser registrada em um arquivo com numeração incremental e com o mesmo nome da tarefa na pasta, acrescido do termo -review, na pasta .ai/reviews/
-
-Ao final, indique se a task pode avançar ou se exige correções.

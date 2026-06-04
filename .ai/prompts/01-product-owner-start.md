@@ -205,6 +205,33 @@ Esses itens poderão ser avaliados em decisões futuras.
 
 Qualquer proposta de alteração da stack deve ser registrada em nova decisão técnica antes de ser implementada.
 
+## 8. Política de escalação para decisão humana
+
+Durante a execução, se identificar necessidade de decisão que afete escopo, arquitetura, stack, persistência, segurança, dados, roadmap, regras de negócio ou comportamento funcional aprovado, não prossiga automaticamente.
+
+Nesse caso, quando houver dúvida de produto, escopo, regra de negócio ou prioridade:
+
+1. Interrompa a execução da tarefa.
+2. Crie um arquivo em `.ai/decision-requests/` conforme model disponível na referida pasta.
+3. Use o padrão de nome:
+
+`NNNN-tema-da-decisao-request.md`
+
+4. Descreva:
+   - contexto;
+   - decisão necessária;
+   - opções possíveis;
+   - vantagens;
+   - desvantagens;
+   - impacto;
+   - recomendação do agente;
+   - riscos de decidir automaticamente;
+   - próximo passo após decisão.
+
+5. Não implemente código relacionado à decisão pendente.
+6. Aguarde decisão humana.
+7. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
+
 ---
 
 # Resumo final obrigatório
