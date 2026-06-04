@@ -300,8 +300,16 @@ a {
 .form-message {
   padding: 12px;
   border-radius: 8px;
+}
+
+.form-message-sucesso {
   color: #047857;
   background: #ecfdf3;
+}
+
+.form-message-erro {
+  color: #b42318;
+  background: #fff1f0;
 }
 
 .action-row {

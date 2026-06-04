@@ -99,6 +99,28 @@ Critérios de aceite:
 - não há upload de arquivos;
 - não há fluxo de aprovação ou histórico.
 
+## Versão 0.4.1 — Refinamentos antes de persistência
+
+Objetivo:
+
+Sanar pendências simples identificadas nos reviews antes de avaliar persistência local, mantendo o MVP claro para validação por usuários administrativos.
+
+Tarefas previstas:
+
+- adicionar validação visual simples para campos mínimos do formulário, se aprovada;
+- ajustar a mensagem de confirmação visual para não sugerir salvamento real;
+- formatar a data de criação da listagem em padrão mais amigável ao usuário;
+- avaliar limpeza de assets sem uso claro em `src/assets/`;
+- manter estilos simples e monitorar o crescimento de `src/style.css`.
+
+Critérios de aceite:
+
+- formulário não indica sucesso pleno quando campos essenciais estiverem vazios;
+- mensagem de confirmação deixa claro que nenhum dado foi salvo;
+- data de criação é exibida em formato legível para o usuário;
+- pendências de baixa complexidade são resolvidas ou registradas no backlog;
+- não há backend, login, banco de dados, localStorage, store de atendimentos ou CRUD completo.
+
 ## Versão 0.5.0 — Estado e persistência local
 
 Objetivo:
@@ -152,8 +174,9 @@ Critérios de aceite:
 2. Consolidar layout e navegação.
 3. Implementar listagem simples.
 4. Implementar cadastro inicial.
-5. Avaliar estado e persistência local somente após aprovação.
-6. Implementar filtros simples e melhorias de uso.
+5. Sanar refinamentos simples antes de persistência.
+6. Avaliar estado e persistência local somente após aprovação.
+7. Implementar filtros simples e melhorias de uso.
 
 ## Observações de escopo
 

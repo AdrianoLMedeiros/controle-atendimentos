@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.4.1] - 2026-06-03
+
+### Adicionado
+
+* Validação visual para impedir confirmação do formulário quando solicitante ou assunto estiverem vazios.
+* Mensagem de erro orientando o preenchimento dos campos essenciais.
+* Exibição da data de criação da listagem em formato `dd/mm/aaaa`.
+* Preservação do valor original da data no atributo `datetime`.
+
+### Alterado
+
+* Ajustada a mensagem de sucesso do formulário para reforçar que nenhum dado foi salvo.
+* Atualizada a documentação do `README.md` para refletir os refinamentos da tarefa 0005.
+
+### Corrigido
+
+* Removidos assets sem uso claro em `src/assets/`.
+* Corrigida a pendência documental do `CHANGELOG.md` apontada no review da tarefa 0005.
+
+### Observações
+
+* O build de produção foi registrado no review da tarefa 0005 como validado com `npm run build`.
+* Não foram implementados backend, autenticação, banco de dados, persistência local, store de atendimentos, CRUD completo, criação real de registros, edição, exclusão, detalhamento, filtros, relatórios, exportação, upload, controle de permissões ou biblioteca visual externa.
+* Permanece como pendência de baixa prioridade o monitoramento do crescimento de `src/style.css`.
+
 ## [0.4.0] - 2026-06-03
 
 ### Adicionado

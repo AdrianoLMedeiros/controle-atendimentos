@@ -10,6 +10,16 @@ const statusLabels: Record<AtendimentoStatus, string> = {
   em_andamento: 'Em andamento',
   concluido: 'Concluído',
 }
+
+function formatarData(data: string): string {
+  const [ano, mes, dia] = data.split('-')
+
+  if (!ano || !mes || !dia) {
+    return data
+  }
+
+  return `${dia}/${mes}/${ano}`
+}
 </script>
 
 <template>
@@ -24,7 +34,7 @@ const statusLabels: Record<AtendimentoStatus, string> = {
       <span class="status-badge" :class="`status-${atendimento.status}`">
         {{ statusLabels[atendimento.status] }}
       </span>
-      <time :datetime="atendimento.dataCriacao">{{ atendimento.dataCriacao }}</time>
+      <time :datetime="atendimento.dataCriacao">{{ formatarData(atendimento.dataCriacao) }}</time>
     </div>
   </article>
 </template>

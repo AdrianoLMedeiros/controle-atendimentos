@@ -6,6 +6,7 @@ const solicitante = ref('')
 const assunto = ref('')
 const status = ref<AtendimentoStatus>('novo')
 const mensagem = ref('')
+const mensagemTipo = ref<'erro' | 'sucesso'>('sucesso')
 
 const statusOptions: Array<{ value: AtendimentoStatus; label: string }> = [
   { value: 'novo', label: 'Novo' },
@@ -14,7 +15,14 @@ const statusOptions: Array<{ value: AtendimentoStatus; label: string }> = [
 ]
 
 function confirmarEnvio() {
-  mensagem.value = 'Atendimento validado visualmente. Nenhum dado foi salvo nesta etapa.'
+  if (!solicitante.value.trim() || !assunto.value.trim()) {
+    mensagemTipo.value = 'erro'
+    mensagem.value = 'Preencha solicitante e assunto para validar o atendimento.'
+    return
+  }
+
+  mensagemTipo.value = 'sucesso'
+  mensagem.value = 'Validação visual concluída. Nenhum dado foi salvo nesta etapa.'
 }
 </script>
 
@@ -48,6 +56,8 @@ function confirmarEnvio() {
       <button class="button-primary" type="submit">Confirmar visualmente</button>
     </div>
 
-    <p v-if="mensagem" class="form-message">{{ mensagem }}</p>
+    <p v-if="mensagem" class="form-message" :class="`form-message-${mensagemTipo}`">
+      {{ mensagem }}
+    </p>
   </form>
 </template>

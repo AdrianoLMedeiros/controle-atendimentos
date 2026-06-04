@@ -2,11 +2,11 @@
 
 ## Descrição breve
 
-SPA inicial para controle de atendimentos administrativos, com base técnica, rotas principais, layout compartilhado, listagem visual simples e formulário inicial sem persistência.
+SPA inicial para controle de atendimentos administrativos, com base técnica, rotas principais, layout compartilhado, listagem visual simples e formulário inicial validado visualmente, sem persistência.
 
 ## Objetivo
 
-Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendimentos administrativos em uma aplicação web simples. No estado atual, o projeto entrega a base técnica, a navegação principal, o layout base, páginas iniciais, uma listagem visual simples com dados demonstrativos e um formulário inicial de cadastro sem persistência de dados.
+Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendimentos administrativos em uma aplicação web simples. No estado atual, o projeto entrega a base técnica, a navegação principal, o layout base, páginas iniciais, uma listagem visual simples com dados demonstrativos e um formulário inicial de cadastro com validação visual, sem persistência de dados.
 
 ## Stack utilizada
 
@@ -34,11 +34,13 @@ Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendime
 - Componentes próprios para lista, item de atendimento e estado vazio.
 - Tipo TypeScript inicial para atendimento administrativo.
 - Dados demonstrativos isolados em `src/data/atendimentos.mock.ts`.
-- Representação visual de protocolo, solicitante, assunto, status e data de criação.
+- Representação visual de protocolo, solicitante, assunto, status e data de criação em formato legível.
 - Página de novo atendimento com formulário visual inicial.
 - Formulário com campos editáveis para solicitante, assunto e status.
+- Validação visual para evitar confirmação quando solicitante ou assunto estiverem vazios.
 - Ação de confirmação visual com mensagem informando que nenhum dado foi salvo.
 - Acesso de retorno da página de novo atendimento para a listagem.
+- Remoção de assets de template sem uso claro em `src/assets/`.
 - `.gitignore` configurado com `node_modules/` e `dist/`.
 
 ## Funcionalidades fora do escopo atual
@@ -90,7 +92,6 @@ src/
     atendimentos.mock.ts
   types/
     atendimento.types.ts
-  assets/
 public/
 ```
 
@@ -136,15 +137,10 @@ npm run preview
 
 ## Próximos passos
 
-- Refinar a apresentação da data de criação para formato mais amigável ao usuário.
-- Refinar a validação visual do formulário de novo atendimento.
-- Validar com o Product Owner os campos essenciais de um atendimento.
 - Avaliar persistência local apenas após aprovação explícita.
 - Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas
 
-- Os reviews das tarefas 0001, 0002, 0003 e 0004 apontaram assets sem uso claro em `src/assets/`, como possíveis sobras de template. Eles não foram removidos nesta atualização porque a tarefa atual restringe alterações ao escopo documental.
-- O review da tarefa 0003 apontou que a data de criação é exibida em formato técnico ISO, como `2026-06-01`, e recomenda refinamento futuro para formato mais amigável.
-- O review da tarefa 0004 apontou que o formulário permite confirmação visual mesmo com solicitante e assunto vazios; recomenda validação visual simples ou ajuste da mensagem em refinamento futuro.
+- A evolução para persistência local ainda depende de aprovação explícita.
 - Os reviews das tarefas 0002, 0003 e 0004 apontaram que `src/style.css` ainda está simples, mas deve ser monitorado para evitar acúmulo de estilos globais, layout e domínio nas próximas etapas.

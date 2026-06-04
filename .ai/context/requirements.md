@@ -100,13 +100,14 @@ Critérios de aceite:
 ### RF005 — Registrar novo atendimento
 
 Descrição:
-O sistema deve possuir uma página para registro de novo atendimento administrativo.
+O sistema deve possuir uma página para registro inicial de novo atendimento administrativo, com formulário visual simples e sem persistência de dados.
 
 Critérios de aceite:
 
 - A página de novo atendimento deve estar acessível por rota própria.
 - A tela deve apresentar um formulário ou estrutura equivalente para registrar um atendimento.
 - O formulário deve conter apenas campos essenciais para a fase inicial.
+- A confirmação do formulário deve deixar claro quando for apenas visual e sem salvamento real.
 - A tela não deve depender de backend, banco de dados ou autenticação para ser acessada.
 
 ### RF006 — Preparar filtragem simples de atendimentos
@@ -231,6 +232,7 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - A filtragem citada no objetivo do briefing deve ser mantida simples nesta fase.
 - A persistência local será avaliada apenas em etapa posterior.
 - A versão 0.1 deve evitar funcionalidades que dependam de backend, autenticação, banco de dados ou permissões.
+- A evolução para estado compartilhado e persistência local depende de aprovação explícita após refinamento do MVP visual.
 
 ## 9. Dúvidas e pontos pendentes
 
@@ -239,6 +241,7 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - Validar se os status iniciais novo, em andamento e concluído são adequados para o uso administrativo real.
 - A página inicial deve exibir algum resumo ou apenas atalhos de navegação?
 - O formulário de novo atendimento deve permitir submissão visual sem persistência ou apenas estruturar os campos?
+- A evolução para persistência local deve ser aprovada agora ou permanecer no backlog?
 - Haverá necessidade de dados demonstrativos para validação do MVP?
 - Quais filtros simples devem ser priorizados quando a filtragem for implementada?
 
