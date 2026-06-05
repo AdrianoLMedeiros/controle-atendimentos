@@ -270,6 +270,9 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - O layout principal deve ser consistente entre as páginas.
 - A listagem deve representar claramente a área de acompanhamento dos atendimentos.
 - A página de novo atendimento deve representar claramente o fluxo de cadastro inicial.
+- O usuário deve conseguir cadastrar atendimentos localmente no navegador.
+- O usuário deve conseguir consultar atendimentos locais por status e busca textual simples.
+- A interface deve deixar claro que os dados persistidos ficam apenas no navegador.
 - O MVP não deve exigir backend, autenticação, banco de dados ou permissões.
 - O MVP não deve incluir upload de arquivos ou relatórios avançados.
 - O escopo atual e o escopo futuro devem permanecer claramente separados.

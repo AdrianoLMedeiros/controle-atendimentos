@@ -147,6 +147,7 @@ npm run preview
 
 ## Próximos passos
 
+- Usar o roteiro em `.ai/context/mvp-validation.md` para conduzir a validação interna do MVP.
 - Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas

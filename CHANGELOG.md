@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.7.0] - 2026-06-05
+
+### Adicionado
+
+* Roteiro de validação interna do MVP em `.ai/context/mvp-validation.md`.
+* Checklist para navegação, cadastro local, listagem, persistência local, filtros simples e estados vazios.
+* Modelo para registro de feedback interno com separação entre bloqueantes, ajustes pequenos, sugestões futuras e dúvidas de produto.
+
+### Observações
+
+* O build de produção foi registrado no review da tarefa 0011 como validado com `npm run build`.
+* Esta entrega é documental e não altera arquivos de produção.
+* Não foram implementados backend, autenticação, banco de dados, sincronização, permissões, edição, exclusão, detalhamento, filtros avançados, relatórios, exportação, upload ou biblioteca externa.
+
 ## [0.6.1] - 2026-06-05
 
 ### Alterado

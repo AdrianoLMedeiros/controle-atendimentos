@@ -237,6 +237,30 @@ Critérios de aceite:
 - pendências remanescentes são registradas no backlog;
 - aplicação continua aderente ao MVP e às decisões aprovadas.
 
+## Versão 0.7.0 — Validação interna do MVP
+
+Objetivo:
+
+Preparar e conduzir validação interna do MVP com foco em confirmar se os fluxos principais atendem ao uso administrativo básico.
+
+Tarefas previstas:
+
+- definir roteiro simples de validação interna;
+- validar navegação principal;
+- validar cadastro local de atendimento;
+- validar listagem de atendimentos locais;
+- validar filtro por status e busca textual simples;
+- registrar feedback de produto sem implementar novas funcionalidades;
+- separar ajustes obrigatórios de sugestões futuras.
+
+Critérios de aceite:
+
+- roteiro de validação cobre os fluxos principais do MVP;
+- feedback interno é registrado de forma objetiva;
+- problemas bloqueantes, se existirem, são separados de melhorias futuras;
+- nenhuma nova funcionalidade é implementada durante a validação;
+- decisões sobre edição, exclusão, detalhamento, relatórios, exportação, backend ou autenticação permanecem fora desta etapa.
+
 ## Ordem recomendada de execução
 
 1. Concluir setup inicial.
@@ -249,6 +273,7 @@ Critérios de aceite:
 8. Sanar refinamentos pós-persistência local.
 9. Implementar filtros simples e melhorias de uso.
 10. Estabilizar o MVP para validação interna.
+11. Preparar e conduzir validação interna do MVP.
 
 ## Observações de escopo
 
