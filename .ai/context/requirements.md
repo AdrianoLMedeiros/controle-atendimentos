@@ -100,14 +100,15 @@ Critérios de aceite:
 ### RF005 — Registrar novo atendimento
 
 Descrição:
-O sistema deve possuir uma página para registro inicial de novo atendimento administrativo, com formulário simples e campos essenciais.
+O sistema deve possuir uma página para registro de novo atendimento administrativo, com formulário simples, campos essenciais e comportamento coerente com a persistência local aprovada.
 
 Critérios de aceite:
 
 - A página de novo atendimento deve estar acessível por rota própria.
 - A tela deve apresentar um formulário ou estrutura equivalente para registrar um atendimento.
 - O formulário deve conter apenas campos essenciais para a fase inicial.
-- Antes da implementação de persistência local, a confirmação do formulário deve deixar claro quando for apenas visual e sem salvamento real.
+- A ação principal do formulário deve indicar que o atendimento será salvo localmente no navegador.
+- O texto da página não deve sugerir que o cadastro é apenas uma validação visual quando houver persistência local implementada.
 - A tela não deve depender de backend, banco de dados ou autenticação para ser acessada.
 
 ### RF008 — Persistir atendimentos localmente
@@ -121,6 +122,7 @@ Critérios de aceite:
 - O atendimento criado deve aparecer na listagem.
 - O atendimento criado deve permanecer disponível após recarregar a página no mesmo navegador.
 - A interface deve informar que os dados ficam apenas no navegador local.
+- A leitura de dados locais deve ignorar registros inválidos ou incompatíveis com os status previstos.
 - A persistência não deve depender de backend, banco de dados, autenticação ou permissões.
 - A persistência local não deve incluir edição, exclusão, detalhamento, filtros ou CRUD completo nesta etapa.
 

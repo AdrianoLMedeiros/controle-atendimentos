@@ -66,7 +66,7 @@ function confirmarEnvio() {
 
     <div class="form-actions">
       <RouterLink class="button-secondary" to="/atendimentos">Voltar para atendimentos</RouterLink>
-      <button class="button-primary" type="submit">Confirmar visualmente</button>
+      <button class="button-primary" type="submit">Salvar localmente</button>
     </div>
 
     <p v-if="mensagem" class="form-message" :class="`form-message-${mensagemTipo}`">

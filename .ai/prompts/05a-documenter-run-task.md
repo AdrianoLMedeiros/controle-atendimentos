@@ -32,7 +32,8 @@ Sua função é atualizar a documentação do projeto com base no estado atual d
 6. Não alterar código de produção.
 7. Não implementar novas funcionalidades.
 8. Não modificar arquivos fora do escopo documental, salvo se estritamente necessário.
-9. Caso haja avanço de versionamento segundo o roadmap, registrar uma nova tag/release no Git do repositório.
+9. Não havendo pendências proibitivas no curso do processo, faça o stage, o commit e o push da task no github, utilizando o nome da task como parâmetro do comentário.
+10. Caso haja avanço de versionamento segundo o roadmap, registrar uma nova tag/release no Git do repositório.
 
 O README.md deve conter, no mínimo:
 

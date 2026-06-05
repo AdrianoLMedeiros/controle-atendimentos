@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.5.2] - 2026-06-04
+
+### Alterado
+
+* Ajustado o texto da página de novo atendimento para indicar salvamento local no navegador.
+* Alterado o botão principal do formulário para `Salvar localmente`.
+* Reforçada a validação de registros lidos do `localStorage` para aceitar apenas status previstos.
+
+### Corrigido
+
+* Registros locais com status inválido passam a ser ignorados sem quebrar a aplicação.
+* Removidas pendências de texto que ainda sugeriam apenas validação visual após persistência local.
+
+### Observações
+
+* O build de produção foi registrado no review da tarefa 0008 como validado com `npm run build`.
+* A mensagem de sucesso segue informando que o atendimento foi salvo localmente neste navegador.
+* Não foram implementados backend, autenticação, banco de dados, sincronização, permissões, edição, exclusão, detalhamento, filtros, relatórios, exportação, upload ou biblioteca externa.
+
 ## [0.5.1] - 2026-06-04
 
 ### Adicionado
@@ -28,7 +47,7 @@
 * O build de produção foi registrado no review da tarefa 0007 como validado com `npm run build`.
 * A persistência implementada é limitada ao navegador e usa a chave `controle-atendimentos:atendimentos`.
 * Não foram implementados backend, autenticação, banco de dados, sincronização, permissões, edição, exclusão, detalhamento, filtros, relatórios, exportação, upload ou biblioteca externa.
-* Permanecem pendências de baixa prioridade: ajustar textos que ainda sugerem validação visual e reforçar a validação de `status` ao ler dados do `localStorage`.
+* As pendências de baixa prioridade desta entrega foram resolvidas na versão 0.5.2.
 
 ## [0.5.0] - 2026-06-04
 

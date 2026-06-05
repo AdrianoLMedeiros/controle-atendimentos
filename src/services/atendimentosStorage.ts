@@ -1,6 +1,7 @@
-import type { Atendimento } from '../types/atendimento.types'
+import type { Atendimento, AtendimentoStatus } from '../types/atendimento.types'
 
 const STORAGE_KEY = 'controle-atendimentos:atendimentos'
+const STATUS_VALIDOS: AtendimentoStatus[] = ['novo', 'em_andamento', 'concluido']
 
 function isAtendimento(value: unknown): value is Atendimento {
   if (!value || typeof value !== 'object') {
@@ -14,7 +15,7 @@ function isAtendimento(value: unknown): value is Atendimento {
     typeof atendimento.protocolo === 'string' &&
     typeof atendimento.solicitante === 'string' &&
     typeof atendimento.assunto === 'string' &&
-    typeof atendimento.status === 'string' &&
+    STATUS_VALIDOS.includes(atendimento.status as AtendimentoStatus) &&
     typeof atendimento.dataCriacao === 'string'
   )
 }

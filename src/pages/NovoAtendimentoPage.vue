@@ -15,7 +15,7 @@ function salvarAtendimento(input: NovoAtendimentoInput) {
     <div class="page-title">
       <span>Novo atendimento</span>
       <h1>Cadastro de atendimento</h1>
-      <p>Preencha os dados essenciais para validar o fluxo visual de cadastro.</p>
+      <p>Preencha os dados essenciais para salvar um atendimento neste navegador.</p>
     </div>
 
     <div class="panel">

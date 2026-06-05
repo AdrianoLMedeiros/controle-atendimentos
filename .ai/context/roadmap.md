@@ -169,6 +169,28 @@ Critérios de aceite:
 - interface não sugere sincronização, compartilhamento ou persistência definitiva;
 - aplicação continua sem backend, login, banco de dados ou permissões.
 
+## Versão 0.5.2 — Refinamentos pós-persistência local
+
+Objetivo:
+
+Sanar pendências simples identificadas após a implementação da persistência local, garantindo que a interface e a leitura de dados locais estejam coerentes com o novo comportamento.
+
+Tarefas previstas:
+
+- ajustar textos da página de novo atendimento que ainda indiquem validação apenas visual;
+- alterar o texto do botão principal do formulário para refletir salvamento local;
+- reforçar a validação de dados lidos do `localStorage`, aceitando apenas status previstos;
+- manter comunicação clara de que os dados ficam apenas no navegador;
+- registrar pendências remanescentes no backlog, se houver.
+
+Critérios de aceite:
+
+- formulário e página não sugerem mais que o cadastro é apenas visual;
+- botão principal comunica ação de salvamento local;
+- registros com status inválido no storage local não são aceitos como atendimentos válidos;
+- não há backend, login, banco de dados, permissões, edição, exclusão, detalhamento ou filtros;
+- layout e navegação existentes são preservados.
+
 ## Versão 0.6.0 — Filtros e melhorias de uso
 
 Objetivo:
@@ -202,7 +224,8 @@ Critérios de aceite:
 5. Sanar refinamentos simples antes de persistência.
 6. Avaliar estado e persistência local.
 7. Implementar persistência local aprovada, limitada ao navegador.
-8. Implementar filtros simples e melhorias de uso.
+8. Sanar refinamentos pós-persistência local.
+9. Implementar filtros simples e melhorias de uso.
 
 ## Observações de escopo
 

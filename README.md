@@ -142,14 +142,11 @@ npm run preview
 
 ## Próximos passos
 
-- Ajustar textos da tela de novo atendimento que ainda sugerem validação apenas visual.
-- Reforçar a validação dos dados lidos do `localStorage`, aceitando apenas status previstos.
+- Ajustar a mensagem de erro do formulário para substituir a referência remanescente a validação visual.
 - Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas
 
 - A persistência local implementada fica limitada ao navegador do usuário.
-- O review da tarefa 0007 apontou que o botão do formulário ainda usa o texto `Confirmar visualmente`, embora a ação salve localmente.
-- O review da tarefa 0007 apontou que a página de novo atendimento ainda menciona validação visual de cadastro.
-- O review da tarefa 0007 apontou que a validação de dados lidos do `localStorage` deve restringir `status` aos valores previstos.
+- O review da tarefa 0008 apontou que a mensagem de erro do formulário ainda usa o termo `validar`.
 - Os reviews das tarefas 0002, 0003 e 0004 apontaram que `src/style.css` ainda está simples, mas deve ser monitorado para evitar acúmulo de estilos globais, layout e domínio nas próximas etapas.
