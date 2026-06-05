@@ -181,6 +181,13 @@ a {
   width: 100%;
 }
 
+.attendance-filters {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) minmax(220px, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
 .attendance-list-items {
   display: grid;
   gap: 12px;
@@ -396,6 +403,10 @@ a {
 
   .attendance-item {
     flex-direction: column;
+  }
+
+  .attendance-filters {
+    grid-template-columns: 1fr;
   }
 
   .attendance-meta {

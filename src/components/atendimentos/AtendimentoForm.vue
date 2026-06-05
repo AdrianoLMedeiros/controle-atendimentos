@@ -21,7 +21,7 @@ const statusOptions: Array<{ value: AtendimentoStatus; label: string }> = [
 function confirmarEnvio() {
   if (!solicitante.value.trim() || !assunto.value.trim()) {
     mensagemTipo.value = 'erro'
-    mensagem.value = 'Preencha solicitante e assunto para validar o atendimento.'
+    mensagem.value = 'Preencha solicitante e assunto para salvar o atendimento localmente.'
     return
   }
 

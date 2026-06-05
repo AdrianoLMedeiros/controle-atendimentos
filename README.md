@@ -31,7 +31,10 @@ Permitir registrar, listar, filtrar e acompanhar atendimentos administrativos em
 - Container de conteúdo e ajustes responsivos básicos no CSS global.
 - Página inicial com acesso para atendimentos e novo atendimento.
 - Página de atendimentos com listagem simples de registros locais.
-- Componentes próprios para lista, item de atendimento e estado vazio.
+- Filtro simples por status na listagem.
+- Busca textual simples por protocolo, solicitante ou assunto.
+- Estado vazio específico quando filtros não retornam resultados.
+- Componentes próprios para filtros, lista, item de atendimento e estado vazio.
 - Tipo TypeScript inicial para atendimento administrativo.
 - Dados demonstrativos isolados em `src/data/atendimentos.mock.ts`, sem uso como fonte persistida.
 - Representação visual de protocolo, solicitante, assunto, status e data de criação em formato legível.
@@ -53,7 +56,7 @@ Permitir registrar, listar, filtrar e acompanhar atendimentos administrativos em
 - Banco de dados.
 - CRUD completo de atendimentos.
 - Persistência compartilhada, sincronizada ou definitiva.
-- Filtros funcionais ou avançados.
+- Filtros avançados.
 - Edição ou exclusão de atendimentos.
 - Detalhamento de atendimento.
 - Upload de arquivos.
@@ -82,6 +85,7 @@ src/
   components/
     atendimentos/
       AtendimentoEmptyState.vue
+      AtendimentoFilters.vue
       AtendimentoForm.vue
       AtendimentoList.vue
       AtendimentoListItem.vue
@@ -142,11 +146,11 @@ npm run preview
 
 ## Próximos passos
 
-- Ajustar a mensagem de erro do formulário para substituir a referência remanescente a validação visual.
+- Avaliar extração do tipo de filtro de status para um contrato compartilhado, se os filtros continuarem evoluindo.
 - Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas
 
 - A persistência local implementada fica limitada ao navegador do usuário.
-- O review da tarefa 0008 apontou que a mensagem de erro do formulário ainda usa o termo `validar`.
+- O review da tarefa 0009 apontou pequena duplicação do tipo de filtro de status entre `AtendimentoFilters.vue` e `AtendimentosPage.vue`.
 - Os reviews das tarefas 0002, 0003 e 0004 apontaram que `src/style.css` ainda está simples, mas deve ser monitorado para evitar acúmulo de estilos globais, layout e domínio nas próximas etapas.

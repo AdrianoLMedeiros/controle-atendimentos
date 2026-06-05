@@ -5,12 +5,18 @@ import AtendimentoListItem from './AtendimentoListItem.vue'
 
 defineProps<{
   atendimentos: Atendimento[]
+  emptyTitle?: string
+  emptyMessage?: string
 }>()
 </script>
 
 <template>
   <div class="attendance-list">
-    <AtendimentoEmptyState v-if="atendimentos.length === 0" />
+    <AtendimentoEmptyState
+      v-if="atendimentos.length === 0"
+      :title="emptyTitle"
+      :message="emptyMessage"
+    />
 
     <div v-else class="attendance-list-items">
       <AtendimentoListItem

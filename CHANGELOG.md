@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.6.0] - 2026-06-05
+
+### Adicionado
+
+* Componente `AtendimentoFilters.vue` para filtro por status e busca textual simples.
+* Filtro por status com opção padrão `Todos`.
+* Busca textual por protocolo, solicitante ou assunto, sem diferenciar maiúsculas e minúsculas.
+* Estado vazio específico para ausência de resultados quando filtros estão aplicados.
+
+### Alterado
+
+* A página de atendimentos passou a filtrar registros locais em memória.
+* Ajustada a mensagem de erro do formulário para refletir salvamento local.
+
+### Corrigido
+
+* Removida a referência remanescente a validação visual na mensagem de erro do formulário.
+
+### Observações
+
+* O build de produção foi registrado no review da tarefa 0009 como validado com `npm run build`.
+* Os filtros operam apenas sobre atendimentos locais já carregados na aplicação.
+* Não foram implementados backend, autenticação, banco de dados, sincronização, permissões, edição, exclusão, detalhamento, filtros avançados, relatórios, exportação, upload ou biblioteca externa.
+
 ## [0.5.2] - 2026-06-04
 
 ### Alterado

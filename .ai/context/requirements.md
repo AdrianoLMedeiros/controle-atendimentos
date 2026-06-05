@@ -129,13 +129,14 @@ Critérios de aceite:
 ### RF006 — Preparar filtragem simples de atendimentos
 
 Descrição:
-O sistema deve considerar a necessidade de filtrar atendimentos administrativos, mantendo a implementação inicial simples e compatível com a ausência de persistência local.
+O sistema deve considerar a necessidade de filtrar atendimentos administrativos, mantendo a implementação simples e compatível com os dados locais persistidos no navegador.
 
 Critérios de aceite:
 
 - A listagem deve prever espaço ou organização compatível com filtros simples.
+- Os filtros iniciais devem priorizar status e busca textual simples.
 - A filtragem avançada não deve ser implementada no MVP.
-- Qualquer filtro inicial deve ser limitado e não deve exigir backend ou banco de dados.
+- Qualquer filtro inicial deve operar apenas sobre dados disponíveis no navegador e não deve exigir backend ou banco de dados.
 
 ### RF007 — Acompanhar atendimentos
 
@@ -260,7 +261,7 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - A página inicial deve exibir algum resumo ou apenas atalhos de navegação?
 - Definir o texto de interface que deixará claro que os dados persistidos serão locais ao navegador.
 - Haverá necessidade de dados demonstrativos para validação do MVP?
-- Quais filtros simples devem ser priorizados quando a filtragem for implementada?
+- Validar futuramente se os filtros por status e busca textual simples são suficientes para o uso administrativo real.
 
 ## 10. Critérios gerais de aceite do MVP
 
