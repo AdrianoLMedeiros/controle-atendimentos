@@ -134,13 +134,14 @@ npm run preview
 - Pinia foi configurado como infraestrutura de estado, com uso inicial limitado a estado geral simples.
 - Persistência, backend, autenticação, banco de dados e permissões permanecem fora do MVP inicial.
 - A interface deve permanecer simples, com CSS próprio e sem biblioteca visual externa nesta etapa.
+- A persistência local limitada ao navegador foi aprovada em `.ai/decisions/0001-local-persistence-decision.md` para implementação posterior; ainda não há `localStorage` ou store de atendimentos implementados.
 
 ## Próximos passos
 
-- Avaliar persistência local apenas após aprovação explícita.
+- Implementar persistência local limitada ao navegador conforme decisão aprovada.
 - Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas
 
-- A evolução para persistência local ainda depende de aprovação explícita.
+- A persistência local foi aprovada, mas ainda não foi implementada.
 - Os reviews das tarefas 0002, 0003 e 0004 apontaram que `src/style.css` ainda está simples, mas deve ser monitorado para evitar acúmulo de estilos globais, layout e domínio nas próximas etapas.

@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.5.0] - 2026-06-04
+
+### Adicionado
+
+* Avaliação técnica e funcional da persistência local para o MVP.
+* Solicitação de decisão humana sobre persistência local em `.ai/decision-requests/0001-local-persistence-request.md`.
+* Decisão formal aprovando persistência local limitada ao navegador em `.ai/decisions/0001-local-persistence-decision.md`.
+* Solicitação de decisão para resolver inconsistência documental em `.ai/decision-requests/0002-resolver-inconsistencia-decisao-persistencia-local-request.md`.
+
+### Alterado
+
+* Atualizado o pedido de decisão de persistência local para indicar que a Opção A foi aprovada.
+* Formalizada a decisão de persistência local com status, contexto, escopo permitido, restrições e consequências.
+* Corrigida a referência da arquitetura para a decisão de stack em `.ai/decisions/0000-initial-stack.md`.
+* Atualizada a documentação do `README.md` para refletir que a persistência local foi aprovada para etapa posterior, mas ainda não implementada.
+
+### Corrigido
+
+* Corrigida a ambiguidade entre pedido de decisão pendente e decisão aprovada para persistência local.
+
+### Observações
+
+* O build de produção foi registrado no review da tarefa 0006 como validado com `npm run build`.
+* Esta entrega é documental e decisória; não implementa `localStorage`, store de atendimentos ou criação real de registros.
+* Persistência local aprovada permanece limitada ao navegador.
+* Backend, autenticação, banco de dados, permissões, CRUD completo, edição, exclusão, detalhamento, filtros avançados, relatórios, exportação e upload continuam fora do escopo.
+
 ## [0.4.1] - 2026-06-03
 
 ### Adicionado
