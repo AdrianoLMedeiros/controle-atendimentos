@@ -19,7 +19,7 @@ Analisar o briefing inicial do projeto e produzir uma definição clara do produ
 1. Criar ou atualizar os arquivos:
 
 .ai/context/requirements.md
-.ai/decisions/0001-initial-stack.md
+.ai/decisions/0000-initial-stack.md
 
 1. Definir o objetivo funcional do sistema.
 2. Identificar o público usuário inicial.
@@ -217,20 +217,20 @@ Nesse caso, quando houver dúvida de produto, escopo, regra de negócio ou prior
 
 `NNNN-tema-da-decisao-request.md`
 
-4. Descreva:
-   - contexto;
-   - decisão necessária;
-   - opções possíveis;
-   - vantagens;
-   - desvantagens;
-   - impacto;
-   - recomendação do agente;
-   - riscos de decidir automaticamente;
-   - próximo passo após decisão.
+1. Descreva:
+   * contexto;
+   * decisão necessária;
+   * opções possíveis;
+   * vantagens;
+   * desvantagens;
+   * impacto;
+   * recomendação do agente;
+   * riscos de decidir automaticamente;
+   * próximo passo após decisão.
 
-5. Não implemente código relacionado à decisão pendente.
-6. Aguarde decisão humana.
-7. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
+2. Não implemente código relacionado à decisão pendente.
+3. Aguarde decisão humana.
+4. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
 
 ---
 

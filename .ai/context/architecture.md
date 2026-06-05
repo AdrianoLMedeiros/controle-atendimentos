@@ -10,7 +10,7 @@ O MVP inicial não deve depender de backend, autenticação, banco de dados, per
 
 ## 2. Stack oficial
 
-A stack oficial aprovada em `.ai/decisions/0001-initial-stack.md` é:
+A stack oficial aprovada em `.ai/decisions/0000-initial-stack.md` é:
 
 - Vue 3;
 - TypeScript;

@@ -28,7 +28,7 @@ A primeira versão funcional deve conter:
 
 ## 4. Fora do escopo inicial
 
-Não fazem parte da versão inicial:
+Não fizeram parte da versão inicial original:
 
 - Backend.
 - Autenticação.
@@ -36,7 +36,7 @@ Não fazem parte da versão inicial:
 - Upload de arquivos.
 - Relatórios avançados.
 - Controle de permissões.
-- Persistência local de dados.
+- Persistência local de dados, posteriormente aprovada de forma limitada ao navegador pela decisão `.ai/decisions/0001-local-persistence-decision.md`.
 - Integrações externas.
 - Fluxos de aprovação.
 - Histórico detalhado de alterações.
@@ -100,15 +100,29 @@ Critérios de aceite:
 ### RF005 — Registrar novo atendimento
 
 Descrição:
-O sistema deve possuir uma página para registro inicial de novo atendimento administrativo, com formulário visual simples e sem persistência de dados.
+O sistema deve possuir uma página para registro inicial de novo atendimento administrativo, com formulário simples e campos essenciais.
 
 Critérios de aceite:
 
 - A página de novo atendimento deve estar acessível por rota própria.
 - A tela deve apresentar um formulário ou estrutura equivalente para registrar um atendimento.
 - O formulário deve conter apenas campos essenciais para a fase inicial.
-- A confirmação do formulário deve deixar claro quando for apenas visual e sem salvamento real.
+- Antes da implementação de persistência local, a confirmação do formulário deve deixar claro quando for apenas visual e sem salvamento real.
 - A tela não deve depender de backend, banco de dados ou autenticação para ser acessada.
+
+### RF008 — Persistir atendimentos localmente
+
+Descrição:
+O sistema deve evoluir para permitir que atendimentos criados no formulário sejam salvos localmente no navegador, conforme decisão aprovada em `.ai/decisions/0001-local-persistence-decision.md`.
+
+Critérios de aceite:
+
+- O formulário deve criar um atendimento local quando os campos essenciais forem preenchidos.
+- O atendimento criado deve aparecer na listagem.
+- O atendimento criado deve permanecer disponível após recarregar a página no mesmo navegador.
+- A interface deve informar que os dados ficam apenas no navegador local.
+- A persistência não deve depender de backend, banco de dados, autenticação ou permissões.
+- A persistência local não deve incluir edição, exclusão, detalhamento, filtros ou CRUD completo nesta etapa.
 
 ### RF006 — Preparar filtragem simples de atendimentos
 
@@ -200,15 +214,15 @@ Um atendimento representa um registro administrativo que pode ser listado, consu
 Descrição:
 A versão inicial não deve exigir login, cadastro de usuário ou qualquer mecanismo de autenticação.
 
-### RN003 — Ausência de persistência no MVP
+### RN003 — Persistência limitada ao navegador
 
 Descrição:
-A versão inicial não deve depender de backend, banco de dados ou persistência local para funcionamento.
+A aplicação não deve depender de backend ou banco de dados. A persistência local aprovada deve ficar limitada ao navegador do usuário.
 
 ### RN004 — Escopo restrito da criação de atendimento
 
 Descrição:
-O registro de novo atendimento no MVP deve se limitar aos dados essenciais e à validação do fluxo inicial, sem anexos, integrações ou processos complexos.
+O registro de novo atendimento deve se limitar aos dados essenciais, sem anexos, integrações, edição, exclusão ou processos complexos.
 
 ### RN005 — Sem controle de permissões
 
@@ -233,7 +247,8 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - A persistência local será avaliada apenas em etapa posterior.
 - A versão 0.1 deve evitar funcionalidades que dependam de backend, autenticação, banco de dados ou permissões.
 - O MVP visual já foi refinado antes da avaliação de persistência local.
-- A evolução para estado compartilhado e persistência local depende de decisão explícita de produto antes de implementação.
+- A persistência local limitada ao navegador foi aprovada em `.ai/decisions/0001-local-persistence-decision.md`.
+- A implementação de persistência local deve permanecer limitada ao navegador, sem backend, autenticação, banco de dados, permissões, edição, exclusão ou CRUD completo.
 
 ## 9. Dúvidas e pontos pendentes
 
@@ -241,7 +256,7 @@ Funcionalidades como persistência local, backend, autenticação, relatórios, 
 - Validar se os campos editáveis mínimos do cadastro inicial devem ser apenas solicitante, assunto e status.
 - Validar se os status iniciais novo, em andamento e concluído são adequados para o uso administrativo real.
 - A página inicial deve exibir algum resumo ou apenas atalhos de navegação?
-- A evolução para persistência local deve ser aprovada agora ou permanecer no backlog?
+- Definir o texto de interface que deixará claro que os dados persistidos serão locais ao navegador.
 - Haverá necessidade de dados demonstrativos para validação do MVP?
 - Quais filtros simples devem ser priorizados quando a filtragem for implementada?
 

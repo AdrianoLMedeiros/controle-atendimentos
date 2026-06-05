@@ -32,6 +32,7 @@ Sua função é atualizar a documentação do projeto com base no estado atual d
 6. Não alterar código de produção.
 7. Não implementar novas funcionalidades.
 8. Não modificar arquivos fora do escopo documental, salvo se estritamente necessário.
+9. Caso haja avanço de versionamento segundo o roadmap, registrar uma nova tag/release no Git do repositório.
 
 O README.md deve conter, no mínimo:
 
@@ -101,20 +102,20 @@ Nesse caso, quando houver inconsistência documental que exija decisão humana:
 
 `NNNN-tema-da-decisao-request.md`
 
-4. Descreva:
-   - contexto;
-   - decisão necessária;
-   - opções possíveis;
-   - vantagens;
-   - desvantagens;
-   - impacto;
-   - recomendação do agente;
-   - riscos de decidir automaticamente;
-   - próximo passo após decisão.
+1. Descreva:
+   * contexto;
+   * decisão necessária;
+   * opções possíveis;
+   * vantagens;
+   * desvantagens;
+   * impacto;
+   * recomendação do agente;
+   * riscos de decidir automaticamente;
+   * próximo passo após decisão.
 
-5. Não implemente código relacionado à decisão pendente.
-6. Aguarde decisão humana.
-7. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
+2. Não implemente código relacionado à decisão pendente.
+3. Aguarde decisão humana.
+4. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
 
 ## Saída esperada
 

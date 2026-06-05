@@ -2,7 +2,7 @@
 
 ## 1. Status
 
-Pendente de decisão humana.
+Decidida em `.ai/decisions/0001-local-persistence-decision.md`.
 
 ## 2. Contexto
 
@@ -173,12 +173,14 @@ Recomendação objetiva: aprovar a Opção A para a próxima etapa apenas se a v
 
 ## 8. Decisão humana
 
-Aguardando decisão.
+Opção A aprovada: persistência local limitada ao navegador.
+
+A decisão formal está registrada em `.ai/decisions/0001-local-persistence-decision.md`.
 
 ## 9. Próximo passo após decisão
 
 Após decisão humana:
 
-- registrar a decisão aprovada em `.ai/decisions/`;
-- se a persistência for aprovada, planejar task específica de implementação local;
-- se for adiada ou rejeitada, planejar a próxima task de filtros simples, refinamento ou documentação conforme prioridade aprovada.
+- planejar task específica de implementação local;
+- manter backend, autenticação, banco de dados, permissões, edição, exclusão e filtros avançados fora do escopo;
+- atualizar documentação geral para registrar que a persistência local foi aprovada para etapa posterior, mas ainda não implementada.

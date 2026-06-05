@@ -1,4 +1,4 @@
-# Decisão 0001 — Stack inicial do projeto
+# Decisão 0000 — Stack inicial do projeto
 
 ## Status
 

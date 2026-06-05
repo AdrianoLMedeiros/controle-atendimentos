@@ -22,7 +22,7 @@ Use o review:
 
 Sua função é atualizar a documentação do projeto com base no estado atual da implementação.
 
-## Tarefas obrigatórias:
+## Tarefas obrigatórias
 
 1. Criar ou atualizar o arquivo README.md na raiz do projeto.
 2. Criar ou atualizar o arquivo CHANGELOG.md na raiz do projeto.
@@ -70,7 +70,7 @@ O CHANGELOG.md deve seguir este formato:
 
 * Observações relevantes, se houver.
 
-## Regras de documentação:
+## Regras de documentação
 
 * Use linguagem clara, objetiva e profissional.
 * Não use emojis.
@@ -94,20 +94,20 @@ Nesse caso, quando houver inconsistência documental que exija decisão humana:
 
 `NNNN-tema-da-decisao-request.md`
 
-4. Descreva:
-   - contexto;
-   - decisão necessária;
-   - opções possíveis;
-   - vantagens;
-   - desvantagens;
-   - impacto;
-   - recomendação do agente;
-   - riscos de decidir automaticamente;
-   - próximo passo após decisão.
+1. Descreva:
+   * contexto;
+   * decisão necessária;
+   * opções possíveis;
+   * vantagens;
+   * desvantagens;
+   * impacto;
+   * recomendação do agente;
+   * riscos de decidir automaticamente;
+   * próximo passo após decisão.
 
-5. Não implemente código relacionado à decisão pendente.
-6. Aguarde decisão humana.
-7. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
+2. Não implemente código relacionado à decisão pendente.
+3. Aguarde decisão humana.
+4. Após a decisão registre um novo arquivo sequencial em `.ai/decisions/`
 
 ## Saída esperada
 

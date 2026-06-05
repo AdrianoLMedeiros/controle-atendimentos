@@ -144,27 +144,29 @@ Critérios de aceite:
 - não há implementação de store de atendimentos, localStorage ou criação real de registros nesta etapa;
 - aplicação continua sem backend, login, banco de dados ou permissões.
 
-## Versão 0.5.1 — Implementação de persistência local, se aprovada
+## Versão 0.5.1 — Implementação de persistência local aprovada
 
 Objetivo:
 
-Implementar estado compartilhado e persistência local somente se a avaliação da versão 0.5.0 aprovar explicitamente essa evolução.
+Implementar estado compartilhado e persistência local limitada ao navegador, conforme decisão aprovada em `.ai/decisions/0001-local-persistence-decision.md`.
 
 Tarefas previstas:
 
-- criar store de atendimentos com Pinia, se aprovada;
-- criar serviço simples para localStorage, se aprovado;
+- criar store de atendimentos com Pinia;
+- criar serviço simples para localStorage;
 - definir contratos de leitura e gravação;
-- permitir cadastro real local no navegador, se aprovado;
+- permitir cadastro real local no navegador;
+- comunicar ao usuário que os dados ficam apenas no navegador;
 - manter persistência limitada ao navegador;
 - preservar ausência de backend, autenticação e banco de dados.
 
 Critérios de aceite:
 
 - decisão de persistência local foi aprovada antes da implementação;
-- atendimentos podem ser mantidos localmente no navegador, se essa etapa for autorizada;
+- atendimentos podem ser mantidos localmente no navegador;
 - store de atendimentos possui responsabilidade clara;
 - serviço de localStorage fica separado da camada visual;
+- interface não sugere sincronização, compartilhamento ou persistência definitiva;
 - aplicação continua sem backend, login, banco de dados ou permissões.
 
 ## Versão 0.6.0 — Filtros e melhorias de uso
@@ -199,7 +201,7 @@ Critérios de aceite:
 4. Implementar cadastro inicial.
 5. Sanar refinamentos simples antes de persistência.
 6. Avaliar estado e persistência local.
-7. Implementar persistência local somente se aprovada.
+7. Implementar persistência local aprovada, limitada ao navegador.
 8. Implementar filtros simples e melhorias de uso.
 
 ## Observações de escopo
