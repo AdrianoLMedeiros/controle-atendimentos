@@ -34,6 +34,7 @@ Permitir registrar, listar, filtrar e acompanhar atendimentos administrativos em
 - Filtro simples por status na listagem.
 - Busca textual simples por protocolo, solicitante ou assunto.
 - Estado vazio específico quando filtros não retornam resultados.
+- Contrato compartilhado para o filtro de status.
 - Componentes próprios para filtros, lista, item de atendimento e estado vazio.
 - Tipo TypeScript inicial para atendimento administrativo.
 - Dados demonstrativos isolados em `src/data/atendimentos.mock.ts`, sem uso como fonte persistida.
@@ -146,11 +147,9 @@ npm run preview
 
 ## Próximos passos
 
-- Avaliar extração do tipo de filtro de status para um contrato compartilhado, se os filtros continuarem evoluindo.
 - Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas
 
 - A persistência local implementada fica limitada ao navegador do usuário.
-- O review da tarefa 0009 apontou pequena duplicação do tipo de filtro de status entre `AtendimentoFilters.vue` e `AtendimentosPage.vue`.
 - Os reviews das tarefas 0002, 0003 e 0004 apontaram que `src/style.css` ainda está simples, mas deve ser monitorado para evitar acúmulo de estilos globais, layout e domínio nas próximas etapas.

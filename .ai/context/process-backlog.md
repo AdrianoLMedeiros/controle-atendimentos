@@ -2,6 +2,10 @@
 
 ## Ideias futuras
 
+### Organização futura do CSS global
+
+Monitorar o crescimento de `src/style.css` e avaliar uma organização simples por responsabilidade quando houver ganho real de manutenção.
+
 ### Agente 06 — Versioning Manager
 
 Responsável por apoiar versionamento, commits, changelog, tags e preparação de releases.

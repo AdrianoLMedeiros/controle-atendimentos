@@ -215,6 +215,28 @@ Critérios de aceite:
 - melhorias mantêm a aplicação simples e adequada ao usuário administrativo;
 - navegação e layout permanecem consistentes.
 
+## Versão 0.6.1 — Estabilização do MVP
+
+Objetivo:
+
+Consolidar pequenos ajustes finais após a entrega dos filtros simples, mantendo o produto pronto para validação interna sem adicionar novas funcionalidades.
+
+Tarefas previstas:
+
+- avaliar extração do tipo de filtro de status para contrato compartilhado;
+- revisar se textos principais continuam coerentes com persistência local limitada ao navegador;
+- revisar estados vazios de cadastro, listagem e filtros;
+- monitorar o crescimento do CSS global e registrar eventual necessidade de organização futura;
+- confirmar que o MVP permanece sem backend, autenticação, banco de dados, permissões, edição, exclusão, detalhamento, relatórios ou exportação.
+
+Critérios de aceite:
+
+- não há nova funcionalidade de produto;
+- contratos simples usados por filtros ficam claros e sem duplicação desnecessária;
+- textos e estados vazios permanecem coerentes com dados locais no navegador;
+- pendências remanescentes são registradas no backlog;
+- aplicação continua aderente ao MVP e às decisões aprovadas.
+
 ## Ordem recomendada de execução
 
 1. Concluir setup inicial.
@@ -226,6 +248,7 @@ Critérios de aceite:
 7. Implementar persistência local aprovada, limitada ao navegador.
 8. Sanar refinamentos pós-persistência local.
 9. Implementar filtros simples e melhorias de uso.
+10. Estabilizar o MVP para validação interna.
 
 ## Observações de escopo
 

@@ -4,11 +4,11 @@ import { computed, ref } from 'vue'
 import AtendimentoFilters from '../components/atendimentos/AtendimentoFilters.vue'
 import AtendimentoList from '../components/atendimentos/AtendimentoList.vue'
 import { useAtendimentosStore } from '../stores/atendimentos'
-import type { AtendimentoStatus } from '../types/atendimento.types'
+import type { AtendimentoStatusFiltro } from '../types/atendimento.types'
 
 const atendimentosStore = useAtendimentosStore()
 const { atendimentos } = storeToRefs(atendimentosStore)
-const statusFiltro = ref<AtendimentoStatus | 'todos'>('todos')
+const statusFiltro = ref<AtendimentoStatusFiltro>('todos')
 const busca = ref('')
 
 const atendimentosFiltrados = computed(() => {

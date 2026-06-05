@@ -1,5 +1,7 @@
 export type AtendimentoStatus = 'novo' | 'em_andamento' | 'concluido'
 
+export type AtendimentoStatusFiltro = AtendimentoStatus | 'todos'
+
 export interface Atendimento {
   id: number
   protocolo: string

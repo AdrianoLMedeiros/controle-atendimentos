@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import type { AtendimentoStatus } from '../../types/atendimento.types'
-
-type StatusFiltro = AtendimentoStatus | 'todos'
+import type { AtendimentoStatusFiltro } from '../../types/atendimento.types'
 
 defineProps<{
-  status: StatusFiltro
+  status: AtendimentoStatusFiltro
   busca: string
 }>()
 
 defineEmits<{
-  'update:status': [status: StatusFiltro]
+  'update:status': [status: AtendimentoStatusFiltro]
   'update:busca': [busca: string]
 }>()
 </script>
@@ -20,7 +18,9 @@ defineEmits<{
       <span>Status</span>
       <select
         :value="status"
-        @change="$emit('update:status', ($event.target as HTMLSelectElement).value as StatusFiltro)"
+        @change="
+          $emit('update:status', ($event.target as HTMLSelectElement).value as AtendimentoStatusFiltro)
+        "
       >
         <option value="todos">Todos</option>
         <option value="novo">Novo</option>

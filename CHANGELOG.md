@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.6.1] - 2026-06-05
+
+### Alterado
+
+* Centralizado o contrato do filtro de status em `AtendimentoStatusFiltro`.
+* Revisados os textos principais e estados vazios da listagem, mantendo a comunicação de dados locais neste navegador.
+
+### Observações
+
+* O build de produção foi registrado no review da tarefa 0010 como validado com `npm run build`.
+* A observação de build da tarefa 0009 já estava registrada na versão 0.6.0.
+* Registrada pendência remanescente de monitoramento do CSS global no backlog do processo.
+* Não foram implementados backend, autenticação, banco de dados, sincronização, permissões, edição, exclusão, detalhamento, filtros avançados, relatórios, exportação, upload ou biblioteca externa.
+
 ## [0.6.0] - 2026-06-05
 
 ### Adicionado
