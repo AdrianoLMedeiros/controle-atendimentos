@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { storeToRefs } from 'pinia'
 import AtendimentoList from '../components/atendimentos/AtendimentoList.vue'
-import { atendimentosMock } from '../data/atendimentos.mock'
+import { useAtendimentosStore } from '../stores/atendimentos'
+
+const atendimentosStore = useAtendimentosStore()
+const { atendimentos } = storeToRefs(atendimentosStore)
 </script>
 
 <template>
@@ -16,7 +20,8 @@ import { atendimentosMock } from '../data/atendimentos.mock'
     </div>
 
     <div class="panel">
-      <AtendimentoList :atendimentos="atendimentosMock" />
+      <p class="local-data-note">Os atendimentos exibidos ficam salvos apenas neste navegador.</p>
+      <AtendimentoList :atendimentos="atendimentos" />
     </div>
   </section>
 </template>

@@ -8,3 +8,9 @@ export interface Atendimento {
   status: AtendimentoStatus
   dataCriacao: string
 }
+
+export interface NovoAtendimentoInput {
+  solicitante: string
+  assunto: string
+  status: AtendimentoStatus
+}

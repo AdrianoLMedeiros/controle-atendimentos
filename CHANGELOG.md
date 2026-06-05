@@ -1,5 +1,35 @@
 # Changelog
 
+## [0.5.1] - 2026-06-04
+
+### Adicionado
+
+* Store de atendimentos com Pinia em `src/stores/atendimentos.ts`.
+* Serviço de persistência local em `src/services/atendimentosStorage.ts`.
+* Criação local de atendimentos a partir do formulário.
+* Geração local de `id`, `protocolo` e `dataCriacao`.
+* Carregamento de atendimentos persistidos no navegador.
+* Exibição dos registros locais na página de atendimentos.
+* Mensagens de interface indicando que os dados ficam salvos apenas neste navegador.
+
+### Alterado
+
+* A página de atendimentos passou a usar a store como fonte da listagem.
+* A página de novo atendimento passou a criar registros locais pela store.
+* O formulário passou a emitir os dados de cadastro para criação local.
+* Atualizada a documentação do `README.md` para refletir a persistência local implementada.
+
+### Corrigido
+
+* A listagem deixou de usar dados demonstrativos como fonte da tela de atendimentos.
+
+### Observações
+
+* O build de produção foi registrado no review da tarefa 0007 como validado com `npm run build`.
+* A persistência implementada é limitada ao navegador e usa a chave `controle-atendimentos:atendimentos`.
+* Não foram implementados backend, autenticação, banco de dados, sincronização, permissões, edição, exclusão, detalhamento, filtros, relatórios, exportação, upload ou biblioteca externa.
+* Permanecem pendências de baixa prioridade: ajustar textos que ainda sugerem validação visual e reforçar a validação de `status` ao ler dados do `localStorage`.
+
 ## [0.5.0] - 2026-06-04
 
 ### Adicionado

@@ -45,6 +45,27 @@ Estratégia recomendada para dados demonstrativos:
 - manter estado vazio claro quando não houver registros locais;
 - manter `src/data/atendimentos.mock.ts` apenas se ainda for útil para referência futura, sem usá-lo como persistência.
 
+Texto de interface recomendado:
+
+- na listagem: `Os atendimentos exibidos ficam salvos apenas neste navegador.`;
+- no formulário, após salvar: `Atendimento salvo localmente neste navegador.`;
+- no estado vazio: `Nenhum atendimento local cadastrado neste navegador.`;
+- evitar textos que sugiram sincronização, compartilhamento ou salvamento definitivo.
+
+Estratégia recomendada para storage:
+
+- usar uma chave única e descritiva no `localStorage`, por exemplo `controle-atendimentos:atendimentos`;
+- isolar leitura, gravação e tratamento de erro em `src/services/atendimentosStorage.ts`;
+- manter componentes sem acesso direto ao `localStorage`;
+- tratar falhas de leitura ou JSON inválido de forma simples, retornando lista vazia;
+- não persistir dados sensíveis.
+
+Estratégia recomendada para protocolo:
+
+- gerar protocolo local simples e legível;
+- evitar dependência de backend ou contador global remoto;
+- deixar claro no código que o protocolo é apenas local nesta fase.
+
 ## Fora do escopo
 
 Não implementar:
@@ -103,6 +124,8 @@ Arquivos que não devem ser alterados sem necessidade:
 - O serviço de `localStorage` fica separado dos componentes visuais.
 - Componentes visuais não acessam `localStorage` diretamente.
 - A listagem não mistura dados demonstrativos com dados locais de forma ambígua.
+- A chave de `localStorage` é única e descritiva para o projeto.
+- Falhas simples de leitura do storage não quebram a aplicação.
 - Nenhum backend, login, banco de dados ou permissão é implementado.
 - Não há edição, exclusão, detalhamento, filtros, relatórios ou exportação.
 - Nenhuma biblioteca externa é adicionada.

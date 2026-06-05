@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { AtendimentoStatus } from '../../types/atendimento.types'
+import type { AtendimentoStatus, NovoAtendimentoInput } from '../../types/atendimento.types'
+
+const emit = defineEmits<{
+  salvar: [input: NovoAtendimentoInput]
+}>()
 
 const solicitante = ref('')
 const assunto = ref('')
@@ -21,8 +25,17 @@ function confirmarEnvio() {
     return
   }
 
+  emit('salvar', {
+    solicitante: solicitante.value,
+    assunto: assunto.value,
+    status: status.value,
+  })
+
+  solicitante.value = ''
+  assunto.value = ''
+  status.value = 'novo'
   mensagemTipo.value = 'sucesso'
-  mensagem.value = 'Validação visual concluída. Nenhum dado foi salvo nesta etapa.'
+  mensagem.value = 'Atendimento salvo localmente neste navegador.'
 }
 </script>
 

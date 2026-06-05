@@ -171,6 +171,12 @@ a {
   color: var(--text-muted);
 }
 
+.local-data-note {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--surface-muted);
+}
+
 .attendance-list {
   width: 100%;
 }

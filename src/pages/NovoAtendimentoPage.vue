@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import AtendimentoForm from '../components/atendimentos/AtendimentoForm.vue'
+import { useAtendimentosStore } from '../stores/atendimentos'
+import type { NovoAtendimentoInput } from '../types/atendimento.types'
+
+const atendimentosStore = useAtendimentosStore()
+
+function salvarAtendimento(input: NovoAtendimentoInput) {
+  atendimentosStore.criarAtendimento(input)
+}
 </script>
 
 <template>
@@ -11,7 +19,8 @@ import AtendimentoForm from '../components/atendimentos/AtendimentoForm.vue'
     </div>
 
     <div class="panel">
-      <AtendimentoForm />
+      <p class="local-data-note">Os atendimentos criados ficam salvos apenas neste navegador.</p>
+      <AtendimentoForm @salvar="salvarAtendimento" />
     </div>
   </section>
 </template>

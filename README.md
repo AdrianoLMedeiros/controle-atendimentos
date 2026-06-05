@@ -2,11 +2,11 @@
 
 ## Descrição breve
 
-SPA inicial para controle de atendimentos administrativos, com base técnica, rotas principais, layout compartilhado, listagem visual simples e formulário inicial validado visualmente, sem persistência.
+SPA inicial para controle de atendimentos administrativos, com base técnica, rotas principais, layout compartilhado, listagem simples e persistência local limitada ao navegador.
 
 ## Objetivo
 
-Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendimentos administrativos em uma aplicação web simples. No estado atual, o projeto entrega a base técnica, a navegação principal, o layout base, páginas iniciais, uma listagem visual simples com dados demonstrativos e um formulário inicial de cadastro com validação visual, sem persistência de dados.
+Permitir registrar, listar, filtrar e acompanhar atendimentos administrativos em uma aplicação web simples. No estado atual, o projeto entrega a base técnica, a navegação principal, o layout base, páginas iniciais, listagem simples e cadastro local limitado ao navegador.
 
 ## Stack utilizada
 
@@ -30,16 +30,19 @@ Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendime
 - Navegação visual entre as páginas principais.
 - Container de conteúdo e ajustes responsivos básicos no CSS global.
 - Página inicial com acesso para atendimentos e novo atendimento.
-- Página de atendimentos com listagem visual simples.
+- Página de atendimentos com listagem simples de registros locais.
 - Componentes próprios para lista, item de atendimento e estado vazio.
 - Tipo TypeScript inicial para atendimento administrativo.
-- Dados demonstrativos isolados em `src/data/atendimentos.mock.ts`.
+- Dados demonstrativos isolados em `src/data/atendimentos.mock.ts`, sem uso como fonte persistida.
 - Representação visual de protocolo, solicitante, assunto, status e data de criação em formato legível.
-- Página de novo atendimento com formulário visual inicial.
+- Página de novo atendimento com formulário inicial.
 - Formulário com campos editáveis para solicitante, assunto e status.
 - Validação visual para evitar confirmação quando solicitante ou assunto estiverem vazios.
-- Ação de confirmação visual com mensagem informando que nenhum dado foi salvo.
+- Ação de cadastro local com mensagem informando que o atendimento foi salvo neste navegador.
 - Acesso de retorno da página de novo atendimento para a listagem.
+- Store de atendimentos em Pinia para centralizar registros locais.
+- Serviço simples de `localStorage` para persistência limitada ao navegador.
+- Geração local de `id`, `protocolo` e `dataCriacao`.
 - Remoção de assets de template sem uso claro em `src/assets/`.
 - `.gitignore` configurado com `node_modules/` e `dist/`.
 
@@ -48,11 +51,8 @@ Permitir, nas próximas etapas, registrar, listar, filtrar e acompanhar atendime
 - Backend.
 - Autenticação.
 - Banco de dados.
-- Persistência local.
 - CRUD completo de atendimentos.
-- Cadastro real persistido.
-- Criação de registros na listagem a partir do formulário.
-- Listagem com dados reais ou persistidos.
+- Persistência compartilhada, sincronizada ou definitiva.
 - Filtros funcionais ou avançados.
 - Edição ou exclusão de atendimentos.
 - Detalhamento de atendimento.
@@ -74,6 +74,7 @@ src/
     index.ts
   stores/
     app.ts
+    atendimentos.ts
   pages/
     HomePage.vue
     AtendimentosPage.vue
@@ -90,6 +91,8 @@ src/
       AppSidebar.vue
   data/
     atendimentos.mock.ts
+  services/
+    atendimentosStorage.ts
   types/
     atendimento.types.ts
 public/
@@ -131,17 +134,22 @@ npm run preview
 - TypeScript deve ser usado sempre que aplicável.
 - Vite foi adotado como ferramenta de desenvolvimento e build.
 - Vue Router foi configurado desde o início para suportar as páginas principais do MVP.
-- Pinia foi configurado como infraestrutura de estado, com uso inicial limitado a estado geral simples.
-- Persistência, backend, autenticação, banco de dados e permissões permanecem fora do MVP inicial.
+- Pinia foi configurado como infraestrutura de estado e usado para centralizar atendimentos locais.
+- Persistência local limitada ao navegador foi aprovada em `.ai/decisions/0001-local-persistence-decision.md`.
+- Backend, autenticação, banco de dados e permissões permanecem fora do MVP inicial.
 - A interface deve permanecer simples, com CSS próprio e sem biblioteca visual externa nesta etapa.
-- A persistência local limitada ao navegador foi aprovada em `.ai/decisions/0001-local-persistence-decision.md` para implementação posterior; ainda não há `localStorage` ou store de atendimentos implementados.
+- A interface deve informar que os dados persistidos ficam apenas neste navegador.
 
 ## Próximos passos
 
-- Implementar persistência local limitada ao navegador conforme decisão aprovada.
+- Ajustar textos da tela de novo atendimento que ainda sugerem validação apenas visual.
+- Reforçar a validação dos dados lidos do `localStorage`, aceitando apenas status previstos.
 - Monitorar o crescimento do CSS global e separar estilos quando houver estilos específicos de domínio.
 
 ## Pendências conhecidas
 
-- A persistência local foi aprovada, mas ainda não foi implementada.
+- A persistência local implementada fica limitada ao navegador do usuário.
+- O review da tarefa 0007 apontou que o botão do formulário ainda usa o texto `Confirmar visualmente`, embora a ação salve localmente.
+- O review da tarefa 0007 apontou que a página de novo atendimento ainda menciona validação visual de cadastro.
+- O review da tarefa 0007 apontou que a validação de dados lidos do `localStorage` deve restringir `status` aos valores previstos.
 - Os reviews das tarefas 0002, 0003 e 0004 apontaram que `src/style.css` ainda está simples, mas deve ser monitorado para evitar acúmulo de estilos globais, layout e domínio nas próximas etapas.
