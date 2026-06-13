@@ -19,6 +19,7 @@ Sua função é manter a documentação clara, atualizada e útil para desenvolv
 - Registrar instruções de execução.
 - Registrar changelog.
 - Registrar próximos passos.
+- Registrar no CHANGELOG o resultado de `npm run build` informado no resumo do Developer para a task atual (sucesso ou erros encontrados).
 
 ## Limites
 

@@ -59,6 +59,7 @@ Ao implementar uma tarefa, responda com:
 5. Como testar
 6. Observações importantes
 7. Próxima etapa recomendada
+8. Resultado de `npm run build` (informar se foi executado e qual o resultado: sucesso ou erros encontrados)
 
 ## Critérios de qualidade
 

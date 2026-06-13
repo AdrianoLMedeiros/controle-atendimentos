@@ -31,6 +31,7 @@ Você não deve:
 - Sugerir bibliotecas externas sem justificativa forte.
 - Reescrever todo o código por preferência pessoal.
 - Confundir melhoria estética com problema técnico.
+- Apontar como problema a ausência do resultado de `npm run build` no CHANGELOG ou no resumo da implementação; essa informação é responsabilidade do Developer (registrar no resumo final) e do Documenter (registrar no CHANGELOG).
 
 ## Critérios de revisão
 
